@@ -1,0 +1,197 @@
+/* styles.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f8ff;
+  color: #1f2d3d;
+  line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+  background: linear-gradient(135deg, #4f46e5, #3b82f6, #22d3ee);
+  text-align: center;
+  padding: 80px 20px;
+  color: #ffffff;
+}
+
+header h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+header h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+header p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* BOTÕES */
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+header a,
+#oferta a,
+#cta-final a {
+  background: #ffffff;
+  color: #3b82f6;
+  padding: 14px 26px;
+  border-radius: 30px;
+  margin: 8px;
+  font-size: 16px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+header a:hover,
+#oferta a:hover,
+#cta-final a:hover {
+  transform: scale(1.05);
+}
+
+/* MAIN */
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* SEÇÕES */
+
+section {
+  background: #ffffff;
+  margin-bottom: 25px;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+/* TÍTULOS */
+
+section h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #2563eb;
+}
+
+section h3 {
+  font-size: 20px;
+  margin-top: 15px;
+  color: #0ea5e9;
+}
+
+section p {
+  margin-bottom: 12px;
+  color: #334155;
+}
+
+/* LISTAS */
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* BENEFÍCIOS */
+
+#beneficios ul li {
+  background: #eef4ff;
+  padding: 12px;
+  border-radius: 10px;
+  border-left: 5px solid #3b82f6;
+}
+
+/* DEPOIMENTOS */
+
+#depoimentos article {
+  background: #f1f5ff;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  border-left: 5px solid #3b82f6;
+}
+
+#depoimentos strong {
+  color: #1d4ed8;
+}
+
+/* OFERTA */
+
+#oferta {
+  background: linear-gradient(135deg, #e0ecff, #e0f7ff);
+  text-align: center;
+}
+
+#oferta p strong {
+  font-size: 32px;
+  color: #1d4ed8;
+}
+
+/* GARANTIA */
+
+#garantia {
+  background: #ecfeff;
+  border-left: 5px solid #06b6d4;
+}
+
+/* FAQ */
+
+#faq h3 {
+  margin-top: 15px;
+  color: #2563eb;
+}
+
+/* CTA FINAL */
+
+#cta-final {
+  background: linear-gradient(135deg, #2563eb, #0ea5e9);
+  color: white;
+  text-align: center;
+}
+
+#cta-final h2 {
+  color: white;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 32px;
+  }
+
+  section {
+    padding: 25px;
+  }
+
+  #oferta p strong {
+    font-size: 24px;
+  }
+}
