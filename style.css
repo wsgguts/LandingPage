@@ -1,0 +1,511 @@
+/* =============================================
+   CASA PRONTA BR — style.css
+   Seguindo apostila: HTML + CSS com Flexbox
+   Cores baseadas na identidade visual da loja
+   ============================================= */
+
+/* --- VARIAVEIS DE COR --- */
+:root {
+  --cor-principal:   #2d6e68;
+  --cor-secundaria:  #4a9e97;
+  --cor-fundo:       #f7f5ef;
+  --cor-fundo-secao: #edf2f0;
+  --cor-rodape:      #1c3432;
+  --cor-botao:       #2d6e68;
+  --cor-texto:       #333333;
+  --cor-texto-claro: #666666;
+}
+
+/* --- RESET BASICO --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- BODY --- */
+body {
+  font-family: 'Nunito', Arial, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+/* =============================================
+   CABECALHO
+   ============================================= */
+header {
+  background-color: var(--cor-fundo);
+  border-bottom: 3px solid var(--cor-principal);
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+header .logo {
+  width: 90px;
+  height: auto;
+  margin: 0;
+}
+
+header h1 {
+  color: var(--cor-principal);
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 28px;
+  margin: 0 0 0 18px;
+  letter-spacing: 1px;
+  flex: 1;
+}
+
+/* =============================================
+   APRESENTACAO
+   ============================================= */
+.apresentacao {
+  background-color: var(--cor-fundo);
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.apresentacao-texto {
+  flex: 1;
+}
+
+.apresentacao-texto h2 {
+  color: var(--cor-principal);
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 32px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.apresentacao-texto h2 em {
+  color: var(--cor-secundaria);
+  font-style: italic;
+}
+
+.apresentacao-texto p {
+  font-size: 17px;
+  color: #555555;
+  line-height: 1.75;
+  margin-bottom: 28px;
+}
+
+.apresentacao-texto p strong {
+  color: var(--cor-principal);
+}
+
+.apresentacao-texto a {
+  display: inline-block;
+  background-color: var(--cor-botao);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 36px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.apresentacao-texto a:hover {
+  background-color: var(--cor-secundaria);
+}
+
+.apresentacao-imagem {
+  flex: 0 0 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apresentacao-imagem img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 12px 36px rgba(45, 110, 104, 0.18);
+}
+
+/* =============================================
+   BENEFICIOS
+   ============================================= */
+.beneficios {
+  background-color: var(--cor-fundo-secao);
+  padding: 50px 40px;
+  text-align: center;
+}
+
+.beneficios h2 {
+  color: var(--cor-principal);
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+.beneficios ul {
+  list-style: none;
+  padding: 0;
+  max-width: 560px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.beneficios ul li {
+  background-color: #ffffff;
+  padding: 14px 20px;
+  border-radius: 8px;
+  border-left: 4px solid var(--cor-botao);
+  text-align: left;
+  font-size: 16px;
+  color: var(--cor-texto);
+}
+
+.beneficios ul li::before {
+  content: '✔  ';
+  color: var(--cor-principal);
+  font-weight: 800;
+}
+
+/* =============================================
+   SOBRE A LOJA
+   ============================================= */
+.sobre {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 60px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sobre-texto {
+  flex: 1;
+}
+
+.sobre-texto h2 {
+  color: var(--cor-principal);
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.sobre-texto h3 {
+  color: var(--cor-secundaria);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.sobre-texto p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444444;
+}
+
+.sobre-foto {
+  flex: 0 0 380px;
+}
+
+.sobre-foto img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 3px solid var(--cor-principal);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+/* =============================================
+   DEPOIMENTOS
+   ============================================= */
+.depoimentos {
+  background-color: var(--cor-fundo-secao);
+  padding: 50px 40px;
+}
+
+.depoimentos h2 {
+  text-align: center;
+  color: var(--cor-principal);
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 26px;
+  margin-bottom: 32px;
+}
+
+.grade-depoimentos {
+  display: flex;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+blockquote {
+  background-color: #ffffff;
+  border-left: 4px solid var(--cor-principal);
+  border-radius: 8px;
+  padding: 24px 20px;
+  margin: 0;
+  flex: 1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+blockquote p {
+  color: #444444;
+  font-size: 15px;
+  line-height: 1.75;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+blockquote cite {
+  color: var(--cor-principal);
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14px;
+}
+
+/* =============================================
+   PRECO E COMPRA
+   ============================================= */
+.secao-preco {
+  background-color: var(--cor-fundo);
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.secao-preco h2 {
+  color: var(--cor-principal);
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+
+.secao-preco img {
+  width: 200px;
+  height: auto;
+  margin: 0 auto 24px;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(45,110,104,0.15);
+}
+
+.secao-preco s {
+  color: #999999;
+  font-size: 18px;
+}
+
+.secao-preco strong {
+  color: var(--cor-botao);
+  font-size: 40px;
+  display: block;
+  margin: 10px 0;
+  font-family: 'Merriweather', Georgia, serif;
+}
+
+.secao-preco a {
+  display: inline-block;
+  background-color: var(--cor-botao);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 16px 48px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin: 20px 0;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+.secao-preco a:hover {
+  background-color: var(--cor-secundaria);
+  transform: translateY(-2px);
+}
+
+.garantia {
+  font-size: 14px;
+  color: var(--cor-texto-claro);
+  margin-top: 8px;
+}
+
+/* =============================================
+   FAQ
+   ============================================= */
+.faq {
+  background-color: var(--cor-fundo-secao);
+  padding: 50px 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq h2 {
+  color: var(--cor-principal);
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 26px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.faq h3 {
+  color: var(--cor-botao);
+  font-size: 17px;
+  font-weight: 700;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.faq p {
+  color: var(--cor-texto);
+  font-size: 15px;
+  line-height: 1.75;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #dde8e6;
+}
+
+/* =============================================
+   RODAPE
+   ============================================= */
+footer {
+  background-color: var(--cor-rodape);
+  color: #ffffff;
+  text-align: center;
+  padding: 36px 20px;
+}
+
+footer p {
+  font-size: 14px;
+  color: #aaaaaa;
+  margin-bottom: 14px;
+}
+
+.links-legais {
+  margin-bottom: 14px;
+}
+
+.links-legais a {
+  color: var(--cor-secundaria);
+  text-decoration: none;
+  font-size: 14px;
+  margin: 0 6px;
+}
+
+.links-legais a:hover {
+  text-decoration: underline;
+}
+
+.redes-sociais {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.redes-sociais a {
+  background-color: var(--cor-botao);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 20px;
+  transition: background-color 0.2s;
+}
+
+.redes-sociais a:hover {
+  background-color: var(--cor-secundaria);
+}
+
+/* =============================================
+   BOTAO WHATSAPP FLUTUANTE
+   ============================================= */
+.whatsapp-flutuante {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #25d366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 999;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+.whatsapp-flutuante:hover {
+  background-color: #128c7e;
+  transform: scale(1.1);
+}
+
+/* =============================================
+   RESPONSIVIDADE — CELULAR (max 768px)
+   ============================================= */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 16px 20px;
+  }
+  header h1 {
+    font-size: 22px;
+    margin: 10px 0 0 0;
+  }
+  header .logo {
+    width: 70px;
+  }
+
+  .apresentacao {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+    gap: 32px;
+  }
+  .apresentacao-texto h2 {
+    font-size: 24px;
+  }
+  .apresentacao-imagem {
+    flex: none;
+    width: 100%;
+  }
+
+  .sobre {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .sobre-foto {
+    flex: none;
+    width: 100%;
+  }
+  .sobre-foto img {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .grade-depoimentos {
+    flex-direction: column;
+  }
+
+  .redes-sociais {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .redes-sociais a {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .faq {
+    padding: 40px 20px;
+  }
+}
