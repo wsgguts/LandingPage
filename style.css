@@ -426,8 +426,8 @@ footer p {
    ============================================= */
 .whatsapp-flutuante {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
+  bottom: 20px;
+  right: 20px;
   background-color: #25d366;
   color: white;
   width: 60px;
