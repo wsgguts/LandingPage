@@ -425,27 +425,13 @@ footer p {
    BOTAO WHATSAPP FLUTUANTE
    ============================================= */
 .whatsapp-flutuante {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366;
-  color: white;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  z-index: 999;
-  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
-  transition: background-color 0.2s, transform 0.15s;
+position: fixed; bottom: 20px; right: 20px;
+background-color: #25d366; color: white; font-size: 32px;
+width: 60px; height: 60px; border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+text-decoration: none; z-index: 999;
 }
-
-.whatsapp-flutuante:hover {
-  background-color: #128c7e;
-  transform: scale(1.1);
-}
+.whatsapp-flutuante:hover { background-color: #128c7e; }
 
 /* =============================================
    RESPONSIVIDADE — CELULAR (max 768px)
